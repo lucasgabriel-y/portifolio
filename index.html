@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Portfolio" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/fa62c117c7.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Lucas Gabriel</title>
+  </head>
+  <body class="light" id="top">
+    <header class="header center">
+      <h3>
+        <a href="https://lucas-gabriel.netlify.app/" class="link"
+          >LG.</a
+        >
+      </h3>
+
+      <nav class="nav center">
+        <ul class="nav__list center">
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#projects">Projetos</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#skills">Skills</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#contact">Contato</a>
+          </li>
+        </ul>
+
+        <button type="button" aria-label="toggle theme" class="btn btn--icon">
+          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
+
+        <button
+          type="button"
+          aria-label="toggle navigation"
+          class="btn btn--icon nav__hamburger"
+        >
+          <i aria-hidden="true" class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- About -->
+      <div class="about center">
+        <h1>Olá, eu sou <span class="about__name">Lucas Gabriel.</span></h1>
+        <h2 class="about__role">Um Analista de Sistemas</h2>
+        <p class="about__desc">
+          Com mais de 3 anos de experiência em Análise de Sistemas e 
+          suporte, sou curioso e averso a processos arcaicos e rotinas, 
+          apaixonado pelo novo e aficcionado por desafios. 
+          Atualmente tenho me dedicado a estudar DevOps e Cloud com 
+          o intuito de me especializar e poder contribuir com projetos da área.
+
+        </p>
+
+        <div class="about__contact center">
+          <a href="https://rxresu.me/lucasgabriel/lucas-gabriel" target="_blank">
+            <button class="btn btn--outline">Currículo</button>
+          </a>
+
+          <a
+            href="https://github.com/lucasgabriel-y"
+            aria-label="github"
+            class="link link--icon"
+          >
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/lucas-gabriel-r/"
+            aria-label="linkedin"
+            class="link link--icon"
+          >
+            <i aria-hidden="true" class="fab fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Projects -->
+      <section id="projects" class="section projects">
+        <h2 class="section__title">Projetos</h2>
+
+        <div class="projects__grid">
+          <div class="project">
+            <h3>Webserver Apache numa instância AWS EC2 com Terraform</h3>
+            <p class="project__description">
+              Este laboratório consiste em subir uma infra na AWS automatizada com Terraform.
+              O objetivo é basicamente disponibilizar um webserver Apache que rode uma página HTML.
+              Os recursos utilizados para a criação do laboratório são basicamente: 
+              criação da VPC e da instancia, configuração dos SGs, criação dos pares de chaves 
+              e instalação dos recursos via SSH na instancia através do "remote exec" .
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">AWS</li>
+              <li class="project__stack-item">Terraform</li>
+              <li class="project__stack-item">IaC</li>
+            </ul>
+
+            <a
+              href="https://github.com/lucasgabriel-y/aws-terraform-apache"
+              aria-label="source code"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://github.com/lucasgabriel-y/aws-terraform-apache"
+              aria-label="live preview"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+
+          <div class="project">
+            <h3>Usando Vagrant para disponibilizar uma aplicação Web através do proxy Nginx</h3>
+            <p class="project__description">
+              O projeto consiste em utilizar o Vagrant para subir duas VMs através
+               do Virtualbox. Na VM-01 é disponibilizada uma aplicação web, nesse 
+               caso o Wordpress, que está rodando dentro de um container Docker, a
+               VM-02 roda um proxy reverso Nginx que dá acesso a aplicação instalada na VM-01.
+              Todo o processo é automatizado bastando apenas executar o Vagrant file.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">IaC</li>
+              <li class="project__stack-item">Vagrant</li>
+              <li class="project__stack-item">Nginx</li>
+            </ul>
+
+            <a
+              href="https://github.com/lucasgabriel-y/wordpress-nginx"
+              aria-label="source code"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://github.com/lucasgabriel-y/wordpress-nginx"
+              aria-label="live preview"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+
+          <div class="project">
+            <h3>Aplicação e banco de dados Wordpress usando Vagrant</h3>
+            <p class="project__description">
+              Este foi um laboratório desenvolvido durante os estudos da 
+              ferramenta Vagrant. O objetivo do laboratório é automatizar
+              a disponibilização da aplicação Wordpress e banco de dados 
+              em máquinas distintas usando o Vagrant.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">IaC</li>
+              <li class="project__stack-item">Vagrant</li>
+              <li class="project__stack-item">Apache</li>
+            </ul>
+
+            <a
+              href="https://github.com/lucasgabriel-y/aplicacao-wordpress/blob/main/README.md"
+              aria-label="source code"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://github.com/lucasgabriel-y/aplicacao-wordpress/blob/main/README.md"
+              aria-label="live preview"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="section skills" id="skills">
+        <h2 class="section__title">Skills</h2>
+        <ul class="skills__list">
+          <li class="skills__list-item btn btn--plain">AWS</li>
+          <li class="skills__list-item btn btn--plain">Linux</li>
+          <li class="skills__list-item btn btn--plain">Docker</li>
+          <li class="skills__list-item btn btn--plain">Terraform</li>
+          <li class="skills__list-item btn btn--plain">Shell Script</li>
+          <li class="skills__list-item btn btn--plain">Vagrant</li>
+          <li class="skills__list-item btn btn--plain">Redes</li>
+          <li class="skills__list-item btn btn--plain">PABX</li>
+          <li class="skills__list-item btn btn--plain">VoIP</li>
+          <li class="skills__list-item btn btn--plain">CFTV</li>
+          <li class="skills__list-item btn btn--plain">Monitoramento</li>
+          <li class="skills__list-item btn btn--plain">APIs</li>
+          
+        </ul>
+      </section>
+
+      <!-- Contact -->
+
+      <section class="section contact center" id="contact">
+        <h2 class="section__title">Contato</h2>
+    
+      <span>
+          <a href="mailto:gabriel.lglg93@gmail.com"><button class="btn btn--inline ">Email</button></a>
+          <a href="https://api.whatsapp.com/send?phone=5591981246117"><button class="btn btn--inline ">WhatsApp</button></a>
+      </span>
+  
+      </section>
+
+
+    </main>
+
+    <footer class="footer">
+      <a
+        href="https://github.com/rajshekhar26/cleanfolio-minimal"
+        class="link footer__link"
+      >
+         Todos os direitos reservados
+      </a>
+    </footer>
+
+    <div class="scroll-container">
+    <div class="scroll-top">
+      <a aria-label="Scroll up" href="#top">
+        <i aria-hidden="true" class="fas fa-arrow-up"></i>
+      </a>
+    </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
