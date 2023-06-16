@@ -157,12 +157,15 @@
           </div>
 
           <div class="project">
-            <h3>Aplicação e banco de dados Wordpress usando Vagrant</h3>
+            <h3>Usando o Terraform para disponibilizar uma infra na AWS</h3>
             <p class="project__description">
-              Este foi um laboratório desenvolvido durante os estudos da 
-              ferramenta Vagrant. O objetivo do laboratório é automatizar
-              a disponibilização da aplicação Wordpress e banco de dados 
-              em máquinas distintas usando o Vagrant.
+              Neste projeto, implementei uma instância EC2 escalonada pelo 
+              Auto Scaling Group (ASG) que notifica via SNS quando ocorrem escalonamentos 
+              ou desligamentos de instâncias. O ASG está protegido por um ELB que utiliza 
+              um WAF para limitar o acesso à rede por IPs. As instâncias EC2 estão distribuídas 
+              em subnets públicas em diferentes zonas de disponibilidade, garantindo alta disponibilidade. 
+              Além disso, elas estão conectadas a um banco de dados em uma rede privada que abrange 
+              duas zonas de disponibilidade.
             </p>
             <ul class="project__stack">
               <li class="project__stack-item">IaC</li>
@@ -171,14 +174,14 @@
             </ul>
 
             <a
-              href="https://github.com/lucasgabriel-y/aplicacao-wordpress/blob/main/README.md"
+              href="https://github.com/lucasgabriel-y/aws-app-rds"
               aria-label="source code"
               class="link link--icon"
             >
               <i aria-hidden="true" class="fab fa-github"></i>
             </a>
             <a
-              href="https://github.com/lucasgabriel-y/aplicacao-wordpress/blob/main/README.md"
+              href="https://github.com/lucasgabriel-y/aws-app-rds"
               aria-label="live preview"
               class="link link--icon"
             >
