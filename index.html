@@ -96,13 +96,14 @@
 
         <div class="projects__grid">
           <div class="project">
-            <h3>Webserver Apache numa instância AWS EC2 com Terraform</h3>
+            <h3>Arquitetura de VPC modular com Bastion Host na AWS</h3>
             <p class="project__description">
-              Este laboratório consiste em subir uma infra na AWS automatizada com Terraform.
-              O objetivo é basicamente disponibilizar um webserver Apache que rode uma página HTML.
-              Os recursos utilizados para a criação do laboratório são basicamente: 
-              criação da VPC e da instancia, configuração dos SGs, criação dos pares de chaves 
-              e instalação dos recursos via SSH na instancia através do "remote exec" .
+          Este projeto construído em Terraform provisiona uma infraestrutura na AWS 
+              para comunicação privada entre duas VPCs, utilizando um Transit Gateway. 
+              Além disso, o projeto inclui recursos como um Bastion Host, uma instância EC2 
+              escalonada por um Auto Scaling Group (ASG), um ELB protegido por um WAF, instâncias 
+              EC2 em uma subnet privada, um NAT Gateway para roteamento de tráfego de saída e 
+              notificações via SNS.
             </p>
             <ul class="project__stack">
               <li class="project__stack-item">AWS</li>
